@@ -1,0 +1,260 @@
+:root{
+    background-color: yellow;
+    width:100%;
+}
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none; outline: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: all .2s linear;
+
+}
+*::selection{
+    background: rgb(255, 205, 113);
+    color: whitesmoke;
+}
+html{
+    font-size:60%;
+    overflow-x: hidden;
+}
+
+section{
+    min-height: 90vh;
+    padding:1rem 5%;
+    padding-top: 6rem;
+}
+
+.heading{
+    color:rgb(243, 207, 3);
+    padding:1rem;
+    font-size: 5rem;
+    text-align: center;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 1000;
+    padding:2rem 5%;
+    background-image: linear-gradient(120deg,orange,yellow);
+}
+header.loggo{
+    font-size:x-large;
+    border-radius: 60%;
+
+}
+
+header .navbar ul{
+    display: flex;
+    align-items:flex-end;
+    justify-content:space-evenly;
+    padding-left: 1000px;
+    word-spacing: 5em;;
+    list-style: none;
+
+}
+header .navbar ul li{
+    margin: 0 1rem;
+}
+header .navbar ul li a{
+    font-size: 2rem;
+    color: rgb(212, 175, 212);
+
+}
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+    color:rgb(212, 175, 212) ;
+}
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    background:url(../images/backgroundimage.jpeg);
+    background-size: contain;
+    background-position: center;
+    background-attachment: scroll;
+    position: relative;
+    text-align: center;
+}
+.home h2{
+    font-size: 5rem;
+    color:black;
+    font-style: italic;
+
+}
+.home p{
+    font-size: 3rem;
+    font-style: italic;
+    color: black;
+    padding: 1rems 0;
+    width:70rem;
+}
+.home h3{
+    font-size: 3.5rem;
+    background-color: cornsilk;
+}
+@keyframes animate{
+    0%{
+        background-position-x: 0rem;
+    }
+    100%{
+        background-position-x: 100rem;
+    }
+}
+.about{
+    display:flex;
+    align-items: right;
+    justify-content: right;
+    flex-wrap: wrap;
+    background-color: white;
+
+}
+.about .image{
+    background-image:cover;
+    background-size: contain;
+    background-position: center;
+    background-attachment: scroll;
+    /* position: relative; */
+    text-align: left;
+}
+.about .image img{
+    height: 75vh;
+    width: 50%;
+
+}
+.about .content{
+    position: absolute;
+    margin-left: 55%;
+    float: right;
+    width: 35%
+
+}
+.about .content h2{
+    font-size: 4.5rem;
+    color: rgb(20, 11, 11)
+
+}
+.about .content p{
+    float: right;
+    font-size: 3.0rem;
+    color: rgb(44, 44, 44);
+
+}
+
+
+.footer{
+    background: rgb(253, 226, 107);
+    
+}
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+.footer .box-container .box{
+    margin:1.5rem;
+    text-align: center;
+     flex: 1 1 25rem; 
+    
+}
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: black;
+    padding: 1rem 0;
+    
+}
+.footer .box-container .box p{
+    font-size:1.7rem;
+    color: black;
+    padding: .7rem 0;
+    
+}
+.footer .box-container .box p i{
+    padding-right: .5rem;
+    color:black;
+    
+}
+.footer .box-container .box a{
+    font-size: 1.8rem;
+    display: block;
+    padding: .7rem 0;
+    color: black;
+    
+}
+.footer .box-container .box a:hover{
+    text-decoration: underline;
+    
+}
+.footer .credit {
+    padding: 1rem 2rem;
+    font-size: 3.0rem;
+    color: black;
+    background: rgb(255, 255, 177);
+    text-align: center;
+    font-weight: normal;
+    padding-bottom: 9rem;
+
+}
+.footer .credit a{
+    color: black;
+}
+/* media Queries*/
+@media(max-width-768px) {
+    html{
+        font-size: 55%;
+    }
+    header #menu{
+        display: block;
+    }
+    header .navbar{
+        position: fixed;
+        top: -120%;left: 0;
+        width: 100%;
+        background: pink;
+    }
+    header .navbar ul{
+        flex-flow: column;
+        padding: 2.1rem 0;
+    }
+    header .navbar ul li {
+        margin: 1.5rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    header .navbar ul li a{
+        font-size: 2.7rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        color: plum;
+    }
+    .fa-times{
+        transform: rotate3d(180deg);
+    }
+    header .navbar.nav-toggle{
+        top: 6.5rem;
+    }
+    .home h1{
+        font-size: 4rem;
+    }
+    .home p{
+        width: auto;
+        color: rgb(20, 11, 11);
+    }
+}
+@media(max-width:500px)
+{
+    html{
+        font-size: 50%;
+    }
+}

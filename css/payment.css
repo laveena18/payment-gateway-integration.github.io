@@ -1,0 +1,27 @@
+html{
+    overflow:hidden;
+}
+body{
+    background-image:url(../images/image2.jpeg) ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+h1{
+    text-align:center;
+    text-transform:uppercase;
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    font-style:normal;
+    font-weight:"bolder";
+    animation-name: ease;
+    animation-duration: 3s;
+    animation-delay: -2s;
+    text-decoration: underline;
+    padding-top: 180px;
+}
+
+.data form{
+    position:relative;
+    top:40px;
+    left:45%;
+}
